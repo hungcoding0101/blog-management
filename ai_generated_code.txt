@@ -1,0 +1,3 @@
+// AI Response for: in this repo, create a crud flow that allows us to manage Blogs, similar to the User flow. Each Blog entity has a many to one relationship with each User. Your will need to create Controllers, services, repositories, entity classes similar to the User flow
+
+Error: Failed to connect to Gemini - Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. The candidate's [finish_reason](https://ai.google.dev/api/generate-content#finishreason) is 1.
