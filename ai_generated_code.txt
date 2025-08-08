@@ -1,0 +1,3 @@
+// AI Response for: in this repo, create a knew crud flow to mange blogs. Each Blog entity with have title (string), content(string). each Blog entity has a many to one relationship with an User entity. you should create code with structure similar to the existing User flow, with controllers, services, repositories, DTO and models, etc
+
+Error: Failed to connect to Ollama - HTTPConnectionPool(host='host.docker.internal', port=11434): Read timed out. (read timeout=60)
