@@ -1,0 +1,46 @@
+// AI Response for: create BLogController that allows us to perform crud operations to Blogs in a way similar to the UserController
+
+FILE_PATH: src/main/java/com/hungcoding/blog/controller/BlogController.java
+
+```java
+package com.hungcoding.blog.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class BlogController {
+
+    @GetMapping("/blogs")
+    public String getBlogs() {
+        // code to retrieve and return all blogs
+        return "All Blogs";
+    }
+
+    @GetMapping("/blog/{id}")
+    public String getBlogById(String id) {
+        // code to retrieve and return a specific blog based on the provided id
+        return "Blog with ID: " + id;
+    }
+
+    @PostMapping("/blogs")
+    public String createBlog(String title, String content) {
+        // code to create a new blog with the given title and content
+        return "Blog created successfully";
+    }
+
+    @PutMapping("/blog/{id}")
+    public String updateBlog(String id, String title, String content) {
+        // code to update an existing blog with the given id and title and content
+        return "Blog updated successfully";
+    }
+
+    @DeleteMapping("/blog/{id}")
+    public String deleteBlog(String id) {
+        // code to delete a blog with the given id
+        return "Blog deleted successfully";
+    }
+}
+```
+
+EXPLANATION: The BlogController class is created as a Spring Boot controller that handles HTTP requests related to blogs. It includes methods for retrieving all blogs, retrieving a specific blog by ID, creating a new blog, updating an existing blog, and deleting a blog. Each method returns a string response indicating the outcome of the operation.
