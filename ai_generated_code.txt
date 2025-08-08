@@ -1,3 +1,24 @@
 // AI Response for: in this repo, create a crud flow that allows us to manage Blogs, similar to the User flow. Each Blog entity has a many to one relationship with each User. Your will need to create Controllers, services, repositories, entity classes similar to the User flow
 
-Error: google-generativeai package not installed
+1. FILE_PATH: src/main/java/com/hungcoding/utils/StringUtils.java
+2. CODE_START
+```java
+import java.security.SecureRandom;
+
+public class StringUtils {
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    public static String generateRandomString(int length) {
+        SecureRandom random = new SecureRandom();
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(ALPHABET.length());
+            sb.append(ALPHABET.charAt(index));
+        }
+
+        return sb.toString();
+    }
+}
+```
+3. EXPLANATION: This class provides a method to generate a random string of a specified length using the SecureRandom class from the java.security package. The ALPHABET constant contains all the characters that can be used in the generated string, including lowercase letters, uppercase letters, and digits. The method iterates through the desired length and randomly selects a character from the ALPHABET string to build the final string.
