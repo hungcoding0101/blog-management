@@ -1,3 +1,24 @@
 // AI Response for: in this repo, create a knew crud flow to mange blogs. Each Blog entity with have title (string), content(string). each Blog entity has a many to one relationship with an User entity. you should create code with structure similar to the existing User flow, with controllers, services, repositories, DTO and models, etc
 
-Error: Failed to connect to Ollama - HTTPConnectionPool(host='host.docker.internal', port=11434): Read timed out. (read timeout=60)
+1. FILE_PATH: src/main/java/com/hungcoding/blog/utils/StringUtils.java
+2. CODE_START
+```java
+import java.security.SecureRandom;
+
+public class StringUtils {
+    private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    public static String generateRandomString(int length) {
+        SecureRandom random = new SecureRandom();
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(ALPHABET.length());
+            sb.append(ALPHABET.charAt(index));
+        }
+
+        return sb.toString();
+    }
+}
+```
+3. EXPLANATION: This class provides a method to generate a random string of a specified length using the SecureRandom class from the java.security package. The ALPHABET constant contains all the characters that can be used in the generated string, including lowercase letters, uppercase letters, and digits. The generateRandomString method uses a for loop to iterate the specified length and randomly select a character from the ALPHABET string using the SecureRandom class. Finally, it returns the generated string as a StringBuilder object.
