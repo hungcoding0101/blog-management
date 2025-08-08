@@ -1,0 +1,12 @@
+{
+  // Use SDKMAN-managed Java for this workspace
+  "java.home": "/home/hung/.sdkman/candidates/java/current",
+  "java.jdt.ls.java.home": "/home/hung/.sdkman/candidates/java/current",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "/home/hung/.sdkman/candidates/java/current",
+      "default": true
+    }
+  ]
+}
